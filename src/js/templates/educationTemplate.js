@@ -22,7 +22,7 @@ educationData.forEach(education => {
         template +=`
         </ul>
         <p class="card-text">
-          <small class="text-muted"><strong>03/2008-12/2012</strong></small>
+          <small class="text-muted"><strong>${education['start-date']}-${education['finish-date']}</strong></small>
         </p>
       </div>
     </div>
