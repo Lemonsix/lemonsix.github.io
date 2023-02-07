@@ -58,5 +58,15 @@
         "finish-date":"",
         "img-src":"src/img/logo_argprograma.png",
         "img-alt":"Logo Argentina Programa"
+    },
+    {
+        "title":"Laravel 8 from Scratch",
+        "status":"Completo",
+        "institute":"Laracast",
+        "skills":["PHP","Laravel","Blade","MVC"],
+        "start-date":"20-01-2023",
+        "finish-date":"07-02-2023",
+        "img-src":"src/img/logo_laravel.png",
+        "img-alt":"Logo Argentina Programa"
     }
 ]
