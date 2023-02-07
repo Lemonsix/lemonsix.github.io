@@ -1,11 +1,11 @@
 [
     {
-        "title":"Egresado Escuela Politecnica",
-        "status":"Egresado",
+        "title":"Polimodal Escuela Politecnica",
+        "status":"Completo",
         "institute":"Escuela Politécnica 703 José Toschke",
         "skills":["Programación de PICS en Assembly","Electronica general","Instalaciones eléctricas","Energías renovables"],
-        "start-date":"01-03-2008",
-        "finish-date":"10-12-2012",
+        "start-date":"01/03/2008",
+        "finish-date":"10/12/2012",
         "img-src":"src/img/logo_703.png",
         "img-alt":"Logo Politécnica 703"
     },
@@ -14,7 +14,7 @@
         "status":"Cursando",
         "institute":"Educación IT",
         "skills":["Desarrollo web con HTML/CSS","Java","POO","Javascript","MySQL"],
-        "start-date":"01-10-22",
+        "start-date":"01/10/22",
         "finish-date":"presente",
         "img-src":"src/img/logo_educacionit.png",
         "img-alt":"Logo EducacionIT"
@@ -24,7 +24,7 @@
         "status":"Cursando",
         "institute":"Open BootCamp",
         "skills":["Fundamentos de Programación","Java","HTML/CSS"],
-        "start-date":"01-10-2022",
+        "start-date":"01/10/2022",
         "finish-date":"presente",
         "img-src":"src/img/logo_openbootcamp.jpg",
         "img-alt":"Logo Open Bootcamp"
@@ -34,7 +34,7 @@
         "status":"StandBy",
         "institute":"Universidad Nacional de la Patagonia San Juan Bosco",
         "skills":["Algoritmica","POO","Estructuras de control","Estructuras de Datos","Java"],
-        "start-date":"01-02-2015",
+        "start-date":"01/02/2015",
         "finish-date":"",
         "img-src":"src/img/logo_unpsjb.png",
         "img-alt":"Logo Universidad Nacional de la Patagonia San Juan Bosco"
@@ -44,17 +44,17 @@
         "status":"StandBy",
         "institute":"Udemy",
         "skills":["HTML/CSS","Javascript","NodeJS","Axios","MongoDB"],
-        "start-date":"01-09-2022",
+        "start-date":"01/09/2022",
         "finish-date":"",
         "img-src":"src/img/logo_udemy.png",
         "img-alt":"Logo Udemy"
     },
     {
         "title":"Curso de Programación",
-        "status":"StandBy",
+        "status":"Cursando",
         "institute":"Argentina Programa",
         "skills":["Gobstones","Javascript","Ruby","HTML/CSS"],
-        "start-date":"01-08-2022",
+        "start-date":"01/08/2022",
         "finish-date":"",
         "img-src":"src/img/logo_argprograma.png",
         "img-alt":"Logo Argentina Programa"
@@ -64,8 +64,8 @@
         "status":"Completo",
         "institute":"Laracast",
         "skills":["PHP","Laravel","Blade","MVC"],
-        "start-date":"20-01-2023",
-        "finish-date":"07-02-2023",
+        "start-date":"20/01/2023",
+        "finish-date":"07/02/2023",
         "img-src":"src/img/logo_laravel.png",
         "img-alt":"Logo Argentina Programa"
     }
