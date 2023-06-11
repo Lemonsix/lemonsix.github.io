@@ -23,7 +23,8 @@
 	import TechnologiesGrid from './components/atoms/TechnologiesGrid.svelte';
 	import StudiesGrid from './components/atoms/StudiesGrid.svelte';
 	import ExperiencesHero from './components/molecules/ExperiencesHero.svelte';
-	
+	import Fusion360Logo from './components/atoms/logos/Fusion360Logo.svelte';
+	import ExperiencesGrid from './components/atoms/ExperiencesGrid.svelte';
 </script>
 
 <Section id="home">
@@ -196,13 +197,25 @@
 				</ul>
 			</div>
 		</Card>
-		<Card title="Autocad">
+		<Card title="Autodesk Autocad">
 			<div class="flex items-center" slot="icon">
 				<AutocadLogo />
 			</div>
 			<div slot="content">
 				<ul>
 					<li>Dibujo de planos 2d</li>
+				</ul>
+			</div>
+		</Card>
+		<Card title="Autodesk Fusion 360">
+			<div class="flex items-center" slot="icon">
+				<Fusion360Logo />
+			</div>
+			<div slot="content">
+				<ul>
+					<li>Modelado Industrial 3D</li>
+					<li>Parametrizado</li>
+					<li>Exports para maquinado CNC o impresión 3D</li>
 				</ul>
 			</div>
 		</Card>
@@ -291,55 +304,63 @@
 </Section>
 <Section id="experience">
 	<H2>Experiencias</H2>
-	<div class="grid grid-cols-2">
-		<ExperiencesHero src="/img/reduno_logo.jpg" title="Desarrollo SisteFTTH">
-			<p class='my-2'>Me incorporé a un desarrollo llevado a cabo por un Project Manager (Tomás Musse) y un Fullstack Developer (Nicolás D'Andrea) cuyo proposito era una solucion integral para <strong>RedUno</strong>, una PyME ISP de la zona con un gran indice de crecimiento. A estas personas les debo mi primer oportunidad en el ámbito del coding donde mas tarde lograria el puesto de PM.</p>
-			<h3 class='font-bold text-lg'>Tareas como Developer:</h3>
-			<ul class="list-disc ml-4">
-				<li>Desarrollo en Laravel 8.0 Monolitico</li>
-				<li>DB MySQL y PostgreSQL</li>
-				<li>Laravel Livewire</li>
-				<li>HTML/CSS/JS</li>
-				<li>Bootstrap</li>
-			</ul>
-			<h3 class='font-bold text-lg'>Como Project Manager + Developer:</h3>
-			<ul class="list-disc ml-4">
-				<li>Analisis funcional</li>
-				<li>Documentación</li>
-				<li>Consultas contables en DB PostgreSQL</li>
-				<li>Control de versiones</li>
-				<li>Scripting en Python</li>
-			</ul>
-			<span slot="period">20/01/2023 - Actualmente</span>
-		</ExperiencesHero>
-		<ExperiencesHero src="/img/logos/logo_smys_scaled.png" title="Administrativo General">
-			<p>Administracion general incluyendo tareas financieras, contables y de analisis en PyME Pesquera SM&S</p>
-			<h3 class='font-bold text-lg'>Tareas:</h3>
-			<ul class="list-disc ml-4">
-				<li>Cuentas Corrientes</li>
-				<li>Compras Industriales</li>
-				<li>Pagos de personal y VEP</li>
-				<li>Liquidacion de sueldos</li>
-				<li>Confeccion de registro de Produccion</li>
-				<li>Calculo de costos</li>
-				<li>DDJJ Impositivo</li>
-				<li>Dibujo de planos en Autodesk Autocad y diseño industrial en Autodesk Fusion 360</li>
-			</ul>
-			<span slot="period">01-03-2013 - 19-02-2023</span>
-		</ExperiencesHero>
-		<ExperiencesHero src="/img/reduno_logo.jpg" title="Desarrollo Vertis" classProps="justify-center col-span-2">
-			<p>Se solicita</p>
-			<h3 class='font-bold text-lg'>Como Project Manager + Developer:</h3>
-			<ul class="list-disc ml-4">
-				<li>Desarrollo en Laravel 8.0 Monolitico</li>
-				<li>DB MySQL y PostgreSQL</li>
-				<li>Laravel Livewire</li>
-				<li>HTML/CSS/JS</li>
-				<li>Bootstrap</li>
-			</ul>
-			<span slot="period">20/01/2023 - Actualmente</span>
-		</ExperiencesHero>
-	</div>
+
+		<ExperiencesGrid>
+			<ExperiencesHero src="/img/logos/logo_smys_scaled.png" alt='Logo S.M.& S.' title="Administrativo General"  place='Pesquera SM&S SRL'>
+				<p>Administracion general incluyendo tareas financieras, contables y de análisis.</p>
+				<h3 class="font-bold text-lg">Tareas:</h3>
+				<ul class="list-disc ml-4">
+					<li>Office Suite</li>
+					<li>Cuentas Corrientes</li>
+					<li>Compras Industriales</li>
+					<li>Pagos de personal y VEP</li>
+					<li>Liquidacion de sueldos</li>
+					<li>Confeccion de registro de Produccion</li>
+					<li>Calculo de costos</li>
+					<li>DDJJ Impositivo</li>
+					<li>Dibujo de planos en Autodesk Autocad</li>
+					<li>Diseño industrial en Autodesk Fusion 360</li>
+				</ul>
+				<span slot="period">01-03-2013 - 19-02-2023</span>
+			</ExperiencesHero>
+			<ExperiencesHero src="/img/reduno_logo.jpg" alt='Logo Red Uno' title="Desarrollo SisteFTTH" place='Red Uno'>
+				<p class="my-2">
+					Me incorporé a un desarrollo llevado a cabo por un Project Manager (Tomás Musse) y un Fullstack Developer (Nicolás D'Andrea) cuyo proposito era una solución integral para <strong>RedUno</strong>
+					, una PyME ISP de la zona con un gran indice de crecimiento. A estas personas les debo mi primer oportunidad en el ámbito del coding donde mas tarde lograría el puesto de PM.
+				</p>
+				<h3 class="font-bold text-lg">Tareas como Developer:</h3>
+				<ul class="list-disc ml-4">
+					<li>Desarrollo en Laravel 8.0 Monolitico</li>
+					<li>DB MySQL y PostgreSQL</li>
+					<li>Laravel Livewire</li>
+					<li>HTML/CSS/JS</li>
+					<li>Bootstrap</li>
+				</ul>
+				<h3 class="font-bold text-lg">Como Project Manager + Developer:</h3>
+				<ul class="list-disc ml-4">
+					<li>Analisis funcional</li>
+					<li>Documentación</li>
+					<li>Consultas contables en DB PostgreSQL</li>
+					<li>Control de versiones</li>
+					<li>Scripting en Python</li>
+				</ul>
+				<span slot="period">20/01/2023 - Actualmente</span>
+			</ExperiencesHero>
+			<ExperiencesHero src="/img/logos/logo_lu17.jpg" title="Desarrollo Vertis"  place='LU17'>
+				<p>Desarrollo de software para venta de publicidades, producción y servicios publicitarios varios.</p>
+				<h3 class="font-bold text-lg">Como Project Manager + Developer:</h3>
+				<ul class="list-disc ml-4">
+					<li>Analisis funcional y UX/UI</li>
+					<li>Backend Laravel 10</li>
+					<li>Frontend SvelteKit</li>
+					<li>API RESTful</li>
+					<li>Tailwind</li>
+					<li>DB en PostgreSQL</li>
+				</ul>
+				<span slot="period">10/06/2023 - Actualmente</span>
+			</ExperiencesHero>
+		</ExperiencesGrid>
+
 </Section>
 <Section id="contact">
 	<H2>Contacto</H2>
