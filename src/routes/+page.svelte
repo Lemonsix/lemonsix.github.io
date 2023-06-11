@@ -25,6 +25,11 @@
 	import ExperiencesHero from './components/molecules/ExperiencesHero.svelte';
 	import Fusion360Logo from './components/atoms/logos/Fusion360Logo.svelte';
 	import ExperiencesGrid from './components/atoms/ExperiencesGrid.svelte';
+	import LinkedinCard from './components/atoms/ContactCard.svelte';
+	import ContactCard from './components/atoms/ContactCard.svelte';
+	import LinkedinLogo from './components/atoms/logos/LinkedinLogo.svelte';
+	import WhatsappLogo from './components/atoms/logos/WhatsappLogo.svelte';
+	import GmailLogo from './components/atoms/logos/GmailLogo.svelte';
 </script>
 
 <Section id="home">
@@ -304,7 +309,6 @@
 </Section>
 <Section id="experience">
 	<H2>Experiencias</H2>
-
 		<ExperiencesGrid>
 			<ExperiencesHero src="/img/logos/logo_smys_scaled.png" alt='Logo S.M.& S.' title="Administrativo General"  place='Pesquera SM&S SRL'>
 				<p>Administracion general incluyendo tareas financieras, contables y de análisis.</p>
@@ -364,5 +368,18 @@
 </Section>
 <Section id="contact">
 	<H2>Contacto</H2>
-	Aca voy a poner como llamarme
+	<div class='flex flex-row'>
+		<ContactCard colors={['#0A66C2','#0255a8']} href='https://www.linkedin.com/in/agascorti/' title='@agascorti'>
+			<LinkedinLogo/>
+		</ContactCard>
+		<ContactCard colors={['#43206D','#1a70c7']} href='https://github.com/Lemonsix' title='@lemonsix'>
+			<GithubLogo/>
+		</ContactCard>
+		<ContactCard colors={['#47ED64','#22C942']} href='https://wa.me/5492804958841' title='Whatsapp'>
+			<WhatsappLogo/>
+		</ContactCard>
+		<ContactCard colors={['#FFFFFF','#CCCCCC']} href='mailto:alan.g.asc@gmail.com' title='Gmail'>
+			<GmailLogo/>
+		</ContactCard>
+	</div>
 </Section>
