@@ -1,6 +1,7 @@
 <script>
 	import '../app.css';
 	import Sidebar from './components/molecules/Sidebar.svelte';
+
 </script>
 
 

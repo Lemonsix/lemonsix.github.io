@@ -23,6 +23,7 @@
 	import TechnologiesGrid from './components/atoms/TechnologiesGrid.svelte';
 	import StudiesGrid from './components/atoms/StudiesGrid.svelte';
 	import ExperiencesHero from './components/molecules/ExperiencesHero.svelte';
+	
 </script>
 
 <Section id="home">
