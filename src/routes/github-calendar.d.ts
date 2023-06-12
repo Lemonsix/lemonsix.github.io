@@ -1,0 +1,1 @@
+declare module 'github-calendar/dist/github-calendar.min.js';

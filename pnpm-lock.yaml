@@ -5,16 +5,19 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  github-calendar:
+    specifier: ^2.3.2
+    version: 2.3.2
   tailwind-scrollbar:
     specifier: ^3.0.4
     version: 3.0.4(tailwindcss@3.3.2)
 
 devDependencies:
   '@playwright/test':
-    specifier: ^1.28.1
+    specifier: ^1.35.0
     version: 1.35.0
   '@sveltejs/adapter-auto':
-    specifier: ^2.0.0
+    specifier: ^2.1.0
     version: 2.1.0(@sveltejs/kit@1.20.2)
   '@sveltejs/adapter-static':
     specifier: ^2.0.2
@@ -23,22 +26,22 @@ devDependencies:
     specifier: ^1.20.2
     version: 1.20.2(svelte@3.59.1)(vite@4.3.9)
   '@typescript-eslint/eslint-plugin':
-    specifier: ^5.45.0
+    specifier: ^5.59.9
     version: 5.59.9(@typescript-eslint/parser@5.59.9)(eslint@8.42.0)(typescript@5.1.3)
   '@typescript-eslint/parser':
-    specifier: ^5.45.0
+    specifier: ^5.59.9
     version: 5.59.9(eslint@8.42.0)(typescript@5.1.3)
   autoprefixer:
     specifier: ^10.4.14
     version: 10.4.14(postcss@8.4.24)
   eslint:
-    specifier: ^8.28.0
+    specifier: ^8.42.0
     version: 8.42.0
   eslint-config-prettier:
-    specifier: ^8.5.0
+    specifier: ^8.8.0
     version: 8.8.0(eslint@8.42.0)
   eslint-plugin-svelte:
-    specifier: ^2.26.0
+    specifier: ^2.30.0
     version: 2.30.0(eslint@8.42.0)(svelte@3.59.1)
   gh-pages:
     specifier: ^5.0.0
@@ -47,28 +50,28 @@ devDependencies:
     specifier: ^8.4.24
     version: 8.4.24
   prettier:
-    specifier: ^2.8.0
+    specifier: ^2.8.8
     version: 2.8.8
   prettier-plugin-svelte:
-    specifier: ^2.8.1
+    specifier: ^2.10.1
     version: 2.10.1(prettier@2.8.8)(svelte@3.59.1)
   svelte:
-    specifier: ^3.54.0
+    specifier: ^3.59.1
     version: 3.59.1
   svelte-check:
-    specifier: ^3.0.1
+    specifier: ^3.4.3
     version: 3.4.3(postcss@8.4.24)(svelte@3.59.1)
   tailwindcss:
     specifier: ^3.3.2
     version: 3.3.2
   tslib:
-    specifier: ^2.4.1
+    specifier: ^2.5.3
     version: 2.5.3
   typescript:
-    specifier: ^5.0.0
+    specifier: ^5.1.3
     version: 5.1.3
   vite:
-    specifier: ^4.3.0
+    specifier: ^4.3.9
     version: 4.3.9
 
 packages:
@@ -638,6 +641,10 @@ packages:
     hasBin: true
     dev: true
 
+  /add-subtract-date@1.0.15:
+    resolution: {integrity: sha512-MiL4wnMyM999meyCrSA3LME9uZ/b5ptSd0ACDVUoTfutFwvkMyIN7nG7gjrU56WEk5RlFLBghabcgdYwY8s+nQ==}
+    dev: false
+
   /ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
     dependencies:
@@ -834,6 +841,11 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
+  /days@1.1.1:
+    resolution: {integrity: sha512-vzeIwVsEIyA35GH4+mPd4hjVDNI87wYANyZFs0BHjBr5kIBH5zEl7LfD6Wr4SFZca4D3CU9IH1w4DuZLlXzKRw==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   /debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
@@ -887,6 +899,13 @@ packages:
   /electron-to-chromium@1.4.427:
     resolution: {integrity: sha512-HK3r9l+Jm8dYAm1ctXEWIC+hV60zfcjS9UA5BDlYvnI5S7PU/yytjpvSrTNrSSRRkuu3tDyZhdkwIczh+0DWaw==}
     dev: true
+
+  /elly@1.1.11:
+    resolution: {integrity: sha512-WFKVcEKEOjdSOhNYFKWQoJDk0Sb0re6v0fIsGkePn97dmPpKM/YoOKRdYIb34T1R13KPRNzDBDmT/Flb/54NXg==}
+    dependencies:
+      iterate-object: 1.3.4
+      sliced: 1.0.1
+    dev: false
 
   /email-addresses@5.0.0:
     resolution: {integrity: sha512-4OIPYlA6JXqtVn8zpHpGiI7vE6EQOAg16aGnDMIAlZVinnoZ8208tW1hAbjWydgN/4PLTT9q+O1K6AH/vALJGw==}
@@ -1141,6 +1160,10 @@ packages:
     dependencies:
       to-regex-range: 5.0.1
 
+  /fillo@1.0.13:
+    resolution: {integrity: sha512-9LYJ0ww96DUYETd2Bia5NS1b8rj42nEE5zsfcUwDErMopTs6BRBe4dRIVjrZGXSiK4vNSL/Q3u0dyqbmkA2Zdg==}
+    dev: false
+
   /find-cache-dir@3.3.2:
     resolution: {integrity: sha512-wXZV5emFEjrridIgED11OoUKLxiYjAcqot/NJdAkOhlJ+vGzwhOAfcG5OX1jP+S0PcjEn8bdMJv+g2jwQ3Onig==}
     engines: {node: '>=8'}
@@ -1177,6 +1200,15 @@ packages:
   /flatted@3.2.7:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
+
+  /formatoid@1.2.4:
+    resolution: {integrity: sha512-9wWHOPJvbIheSpiHGl0xaBwdszlzPaeh2KqHVexGQnKpO85xrMoKvuf6M3q0B4uC3I9lkXjH6+8ipQC8PQ/7Gw==}
+    dependencies:
+      days: 1.1.1
+      fillo: 1.0.13
+      months: 1.2.0
+      parse-it: 1.0.10
+    dev: false
 
   /fraction.js@4.2.0:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
@@ -1217,6 +1249,25 @@ packages:
       fs-extra: 8.1.0
       globby: 6.1.0
     dev: true
+
+  /github-calendar-legend@1.0.11:
+    resolution: {integrity: sha512-V7AkszKw2fMeU+g6W5dQ7vDGzJ3giSaukdOUEdUqhcHhQDVYcQf7c0Q3korbQzJsh+Wh3MqyPtN+ZSAuEnHP2A==}
+    dev: false
+
+  /github-calendar-parser@1.2.2:
+    resolution: {integrity: sha512-lA47NHVu5lTH0kZf71W+NXhqr3hvsHLwMRqUxTNsopLDQNCQTAgyhzHwi5iJegq2cTTn4p1ZeqmHyt8RbbhPOw==}
+    dependencies:
+      github-calendar-legend: 1.0.11
+    dev: false
+
+  /github-calendar@2.3.2:
+    resolution: {integrity: sha512-PZWDI4kcOG2vFCOUzLhUL5xA1Vu4ZF5qJ653CWyr/Q/8yLiTEDjNenhG7djlHoza9u/unnPtrhnHDiNLY9kTlQ==}
+    dependencies:
+      add-subtract-date: 1.0.15
+      elly: 1.1.11
+      formatoid: 1.2.4
+      github-calendar-parser: 1.2.2
+    dev: false
 
   /glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -1377,6 +1428,10 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
+  /iterate-object@1.3.4:
+    resolution: {integrity: sha512-4dG1D1x/7g8PwHS9aK6QV5V94+ZvyP4+d19qDv43EzImmrndysIl4prmJ1hWWIGCqrZHyaHBm6BSEWHOLnpoNw==}
+    dev: false
+
   /jiti@1.18.2:
     resolution: {integrity: sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==}
     hasBin: true
@@ -1510,6 +1565,11 @@ packages:
       minimist: 1.2.8
     dev: true
 
+  /months@1.2.0:
+    resolution: {integrity: sha512-zFM7hUpziSYGk2DNObYGWgHdRRxAOgjl8CC1Rbl50p/q0rGDsREfk0nbxxmSIquVi/lEAuUY8nwbwkZ8biNCOQ==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -1621,6 +1681,12 @@ packages:
     dependencies:
       callsites: 3.1.0
     dev: true
+
+  /parse-it@1.0.10:
+    resolution: {integrity: sha512-VAG4EuoNd2TT2wSRUuKyLEkZR3MhdWc+3UPp5CDQzqSt/FiniG+yJ5RXyJYiuzVAMEKL4d97gx6O3LR5jEB3uQ==}
+    dependencies:
+      regex-escape: 3.4.10
+    dev: false
 
   /path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
@@ -1813,6 +1879,10 @@ packages:
     dependencies:
       picomatch: 2.3.1
 
+  /regex-escape@3.4.10:
+    resolution: {integrity: sha512-qEqf7uzW+iYcKNLMDFnMkghhQBnGdivT6KqVQyKsyjSWnoFyooXVnxrw9dtv3AFLnD6VBGXxtZGAQNFGFTnCqA==}
+    dev: false
+
   /resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -1915,6 +1985,10 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
     dev: true
+
+  /sliced@1.0.1:
+    resolution: {integrity: sha512-VZBmZP8WU3sMOZm1bdgTadsQbcscK0UM8oKxKVBs4XAhUo2Xxzm/OFMGBkPusxw9xL3Uy8LrzEqGqJhclsr0yA==}
+    dev: false
 
   /sorcery@0.11.0:
     resolution: {integrity: sha512-J69LQ22xrQB1cIFJhPfgtLuI6BpWRiWu1Y3vSsIwK/eAScqJxd/+CJlUuHQRdX2C9NGFamq+KqNywGgaThwfHw==}

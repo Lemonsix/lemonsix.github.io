@@ -28,6 +28,7 @@
 	import WhatsappLogo from './components/atoms/logos/WhatsappLogo.svelte';
 	import GmailLogo from './components/atoms/logos/GmailLogo.svelte';
 	import HomeSection from './components/atoms/HomeSection.svelte';
+	import Loader from './components/atoms/Loader.svelte';
 </script>
 
 <HomeSection id="home">
@@ -37,7 +38,6 @@
 	</h1>
 	<H2>Full stack dev Jr.</H2>
 	<div class="flex flex-row">
-		<img src="" alt="" />
 		<p>
 			Hola! Me llamo Alan y soy desarrollador Full Stack JR. Sin embargo no es lo unico que hago, tengo 10 años de experiencia administrativa (mayormente financiera y contable) y entre mis hobbies se encuentran tocar la guitarra, jugar videojuegos, la mecánica y el diseño y prototipado industrial. Tambien tengo un startup de desarrollo llamado Sixlabs donde realizo consultorías contables,
 			desarrollo a medida para empresas y prototipado 3d industrial en Autodesk Fusion 360.
@@ -307,77 +307,81 @@
 </Section>
 <Section id="experience">
 	<H2>Experiencias</H2>
-		<ExperiencesGrid>
-			<ExperiencesHero src="/img/logos/logo_smys_scaled.png" alt='Logo S.M.& S.' title="Administrativo General"  place='Pesquera SM&S SRL'>
-				<p>Administracion general incluyendo tareas financieras, contables y de análisis.</p>
-				<h3 class="font-bold text-lg">Tareas:</h3>
-				<ul class="list-disc ml-4">
-					<li>Office Suite</li>
-					<li>Cuentas Corrientes</li>
-					<li>Compras Industriales</li>
-					<li>Pagos de personal y VEP</li>
-					<li>Liquidacion de sueldos</li>
-					<li>Confeccion de registro de Produccion</li>
-					<li>Calculo de costos</li>
-					<li>DDJJ Impositivo</li>
-					<li>Dibujo de planos en Autodesk Autocad</li>
-					<li>Diseño industrial en Autodesk Fusion 360</li>
-				</ul>
-				<span slot="period">01-03-2013 - 19-02-2023</span>
-			</ExperiencesHero>
-			<ExperiencesHero src="/img/reduno_logo.jpg" alt='Logo Red Uno' title="Desarrollo SisteFTTH" place='Red Uno'>
-				<p class="my-2">
-					Me incorporé a un desarrollo llevado a cabo por un Project Manager (Tomás Musse) y un Fullstack Developer (Nicolás D'Andrea) cuyo proposito era una solución integral para <strong>RedUno</strong>
-					, una PyME ISP de la zona con un gran indice de crecimiento. A estas personas les debo mi primer oportunidad en el ámbito del coding donde mas tarde lograría el puesto de PM.
-				</p>
-				<h3 class="font-bold text-lg">Tareas como Developer:</h3>
-				<ul class="list-disc ml-4">
-					<li>Desarrollo en Laravel 8.0 Monolitico</li>
-					<li>DB MySQL y PostgreSQL</li>
-					<li>Laravel Livewire</li>
-					<li>HTML/CSS/JS</li>
-					<li>Bootstrap</li>
-				</ul>
-				<h3 class="font-bold text-lg">Como Project Manager + Developer:</h3>
-				<ul class="list-disc ml-4">
-					<li>Analisis funcional</li>
-					<li>Documentación</li>
-					<li>Consultas contables en DB PostgreSQL</li>
-					<li>Control de versiones</li>
-					<li>Scripting en Python</li>
-				</ul>
-				<span slot="period">20/01/2023 - Actualmente</span>
-			</ExperiencesHero>
-			<ExperiencesHero src="/img/logos/logo_lu17.jpg" title="Desarrollo Vertis"  place='LU17'>
-				<p>Desarrollo de software para venta de publicidades, producción y servicios publicitarios varios.</p>
-				<h3 class="font-bold text-lg">Como Project Manager + Developer:</h3>
-				<ul class="list-disc ml-4">
-					<li>Analisis funcional y UX/UI</li>
-					<li>Backend Laravel 10</li>
-					<li>Frontend SvelteKit</li>
-					<li>API RESTful</li>
-					<li>Tailwind</li>
-					<li>DB en PostgreSQL</li>
-				</ul>
-				<span slot="period">10/06/2023 - Actualmente</span>
-			</ExperiencesHero>
-		</ExperiencesGrid>
-
+	<ExperiencesGrid>
+		<ExperiencesHero src="/img/logos/logo_smys_scaled.png" alt="Logo S.M.& S." title="Administrativo General" place="Pesquera SM&S SRL">
+			<p>Administracion general incluyendo tareas financieras, contables y de análisis.</p>
+			<h3 class="font-bold text-lg">Tareas:</h3>
+			<ul class="list-disc ml-4">
+				<li>Office Suite</li>
+				<li>Cuentas Corrientes</li>
+				<li>Compras Industriales</li>
+				<li>Pagos de personal y VEP</li>
+				<li>Liquidacion de sueldos</li>
+				<li>Confeccion de registro de Produccion</li>
+				<li>Calculo de costos</li>
+				<li>DDJJ Impositivo</li>
+				<li>Dibujo de planos en Autodesk Autocad</li>
+				<li>Diseño industrial en Autodesk Fusion 360</li>
+			</ul>
+			<span slot="period">01-03-2013 - 19-02-2023</span>
+		</ExperiencesHero>
+		<ExperiencesHero src="/img/reduno_logo.jpg" alt="Logo Red Uno" title="Desarrollo SisteFTTH" place="Red Uno">
+			<p class="my-2">Me incorporé a un desarrollo llevado a cabo por un Project Manager (Tomás Musse) y un Fullstack Developer (Nicolás D'Andrea) cuyo proposito era una solución integral para una PyME ISP de la zona con un gran indice de crecimiento. A estas personas les debo mi primer oportunidad en el ámbito del coding donde mas tarde lograría el puesto de PM.</p>
+			<h3 class="font-bold text-lg">Tareas como Developer:</h3>
+			<ul class="list-disc ml-4">
+				<li>Desarrollo en Laravel 8.0 Monolitico</li>
+				<li>DB MySQL y PostgreSQL</li>
+				<li>Laravel Livewire</li>
+				<li>HTML/CSS/JS</li>
+				<li>Bootstrap</li>
+			</ul>
+			<h3 class="font-bold text-lg">Como Project Manager + Developer:</h3>
+			<ul class="list-disc ml-4">
+				<li>Analisis funcional</li>
+				<li>Documentación</li>
+				<li>Consultas contables en DB PostgreSQL</li>
+				<li>Control de versiones</li>
+				<li>Scripting en Python</li>
+			</ul>
+			<span slot="period">20/01/2023 - Actualmente</span>
+		</ExperiencesHero>
+		<ExperiencesHero src="/img/logos/logo_lu17.jpg" title="Desarrollo Vertis" place="LU17">
+			<p>Desarrollo de software para venta de publicidades, producción y servicios publicitarios varios.</p>
+			<h3 class="font-bold text-lg">Como Project Manager + Developer:</h3>
+			<ul class="list-disc ml-4">
+				<li>Analisis funcional y UX/UI</li>
+				<li>Backend Laravel 10</li>
+				<li>Frontend SvelteKit</li>
+				<li>API RESTful</li>
+				<li>Tailwind</li>
+				<li>DB en PostgreSQL</li>
+			</ul>
+			<span slot="period">10/06/2023 - Actualmente</span>
+		</ExperiencesHero>
+	</ExperiencesGrid>
+</Section>
+<Section>
+	<H2>Actividad en github</H2>
+	<div class="calendar w-full lg:w-3/4 text-white">
+		<div class="flex text-center">
+			<Loader />
+		</div>
+	</div>
 </Section>
 <Section id="contact">
 	<H2>Contacto</H2>
-	<div class='flex flex-col md:flex-row'>
-		<ContactCard colors={['#0A66C2','#0255a8']} href='https://www.linkedin.com/in/agascorti/' title='@agascorti'>
-			<LinkedinLogo/>
+	<div class="flex flex-col md:flex-row">
+		<ContactCard colors={['#0A66C2', '#0255a8']} href="https://www.linkedin.com/in/agascorti/" title="@agascorti">
+			<LinkedinLogo />
 		</ContactCard>
-		<ContactCard colors={['#43206D','#1a70c7']} href='https://github.com/Lemonsix' title='@lemonsix'>
-			<GithubLogo/>
+		<ContactCard colors={['#43206D', '#1a70c7']} href="https://github.com/Lemonsix" title="@lemonsix">
+			<GithubLogo />
 		</ContactCard>
-		<ContactCard colors={['#47ED64','#22C942']} href='https://wa.me/5492804958841' title='Whatsapp'>
-			<WhatsappLogo/>
+		<ContactCard colors={['#47ED64', '#22C942']} href="https://wa.me/5492804958841" title="Whatsapp">
+			<WhatsappLogo />
 		</ContactCard>
-		<ContactCard colors={['#FFFFFF','#CCCCCC']} href='mailto:alan.g.asc@gmail.com' title='Gmail'>
-			<GmailLogo/>
+		<ContactCard colors={['#FFFFFF', '#CCCCCC']} href="mailto:alan.g.asc@gmail.com" title="Gmail">
+			<GmailLogo />
 		</ContactCard>
 	</div>
 </Section>
