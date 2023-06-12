@@ -1,7 +1,5 @@
 <script>
-	import Grid from './components/atoms/TechnologiesGrid.svelte';
 	import H2 from './components/atoms/H2.svelte';
-	import Pattern from './components/atoms/Pattern.svelte';
 	import Section from './components/atoms/Section.svelte';
 	import AutocadLogo from './components/atoms/logos/AutocadLogo.svelte';
 	import BootstrapLogo from './components/atoms/logos/BootstrapLogo.svelte';
@@ -25,14 +23,14 @@
 	import ExperiencesHero from './components/molecules/ExperiencesHero.svelte';
 	import Fusion360Logo from './components/atoms/logos/Fusion360Logo.svelte';
 	import ExperiencesGrid from './components/atoms/ExperiencesGrid.svelte';
-	import LinkedinCard from './components/atoms/ContactCard.svelte';
 	import ContactCard from './components/atoms/ContactCard.svelte';
 	import LinkedinLogo from './components/atoms/logos/LinkedinLogo.svelte';
 	import WhatsappLogo from './components/atoms/logos/WhatsappLogo.svelte';
 	import GmailLogo from './components/atoms/logos/GmailLogo.svelte';
+	import HomeSection from './components/atoms/HomeSection.svelte';
 </script>
 
-<Section id="home">
+<HomeSection id="home">
 	<h1 class="text-8xl my-12 font-anton">
 		<span>Portfolio Alan Ascorti</span>
 		<span class="text-yellow-300">aka Lemonsix</span>
@@ -45,7 +43,7 @@
 			desarrollo a medida para empresas y prototipado 3d industrial en Autodesk Fusion 360.
 		</p>
 	</div>
-</Section>
+</HomeSection>
 <Section id="technologies">
 	<H2>Stack Tecnológico</H2>
 	<TechnologiesGrid>
@@ -368,7 +366,7 @@
 </Section>
 <Section id="contact">
 	<H2>Contacto</H2>
-	<div class='flex flex-row'>
+	<div class='flex flex-col md:flex-row'>
 		<ContactCard colors={['#0A66C2','#0255a8']} href='https://www.linkedin.com/in/agascorti/' title='@agascorti'>
 			<LinkedinLogo/>
 		</ContactCard>

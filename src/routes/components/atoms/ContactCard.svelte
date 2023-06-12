@@ -5,9 +5,9 @@
 </script>
 
 <a {href}>
-	<div style="background: linear-gradient(to bottom, {colors[0]}, {colors[1]});" class="flex flex-col rounded-xl gradient mx-4 shadow px-4 py-2">
+	<div style="background: linear-gradient(to bottom, {colors[0]}, {colors[1]});" class="flex flex-col items-center my-4 rounded-xl gradient mx-4 shadow px-4 py-2">
 		<slot />
-		<span class="text-center text-{colors[0]}">{title}</span>
+		<span class="text-center text-{colors[0]} text-2xl">{title}</span>
 	</div>
 </a>
 
