@@ -1,0 +1,109 @@
+{
+        "title": "Portfolio de Alan Ascorti",
+        "presentation": "Hola! Me llamo Alan y soy desarrollador Full Stack JR. Sin embargo no es lo unico que hago, tengo 10 años de experiencia administrativa (mayormente financiera y contable) y entre mis hobbies se encuentran tocar la guitarra, jugar videojuegos, la mecánica y el diseño y prototipado industrial. Tambien tengo un startup de desarrollo llamado Sixlabs donde realizo consultorías contables, desarrollo a medida para empresas y prototipado 3d industrial en Autodesk Fusion 360.",
+        "titleTechnologies":"Stack Tecnológico",
+        "titleToolkit":"Herramientas",
+        "titleStudies":"Estudios",
+        "polimodalCard": {
+            "title": "Polimodal Electronica",
+            "li1":"Programación de PICS en Assembly",
+            "li2":"Electronica general",
+            "li3":"Instalaciones eléctricas",
+            "li4":"Energías renovables"
+        },
+        "argentinaProgramaCard":{
+            "title": "Curso de Programación",
+            "li1":"Gobstones",
+            "li2":"Javascript",
+            "li3":"Ruby",
+            "li4":"HTML/CSS"
+        },
+        "openBootcampCertificationsCard":{
+            "title": "Certificaciones OpenBootcamp",
+            "li1":"Fundamentos de Programacion",
+            "li2":"Java",
+            "li4":"HTML/CSS"
+        },
+        "laracastsCard":{
+            "title": "Laravel 8 from Scratch",
+            "li1":"PHP",
+            "li2":"Laravel",
+            "li3":"Blade",
+            "li4":"MVC"
+        },
+        "javaDeveloperCard":{
+            "title": "Carrera Java Dev",
+            "li1":"HTML/CSS",
+            "li2":"Java",
+            "li3":"POO",
+            "li4":"MVC",
+            "li5":"Javascript",
+            "li6":"MySQL"
+        },
+        "udemyJavascriptCard":{
+            "title": "Learn JavaScript: Full-Stack from Scratch",
+            "li1":"HTML/CSS",
+            "li2":"Javascript",
+            "li3":"NodeJS",
+            "li4":"Axios",
+            "li5":"MongoDB"
+        },
+        "unpsjbCard":{
+            "title": "Licenciatura informática",
+            "li1":"Algoritmica",
+            "li2":"Java",
+            "li3":"Assembly"
+        },
+        "smysJob":{
+            "title": "Administrativo General",
+            "subtitle": "Administracion general incluyendo tareas financieras, contables y de análisis.",
+            "tasks": {
+                "title": "Tareas",
+                "li1": "Office Suite",
+                "li2": "Cuentas Corrientes",
+                "li3": "Compras Industriales",
+                "li4": "Pagos de personal y liq de sueldos",
+                "li5": "Confeccion de registro de Produccion",
+                "li6": "Calculo de costos",
+                "li7": "DDJJ Impositivo",
+                "li8": "Dibujo de planos en Autodesk Autocad",
+                "li9": "Diseño industrial en Autodesk Fusion 360"
+            }
+        },
+        "titleExperiences": "Experiencias",
+        "sisteFtth":{
+            "title": "Desarrollo SisteFTTH",
+            "subtitle": "Me incorporé a un desarrollo llevado a cabo por un Project Manager (Tomás Musse) y un Fullstack Developer (Nicolás D'Andrea) cuyo proposito era una solución integral para una PyME ISP de la zona con un gran indice de crecimiento. A estas personas les debo mi primer oportunidad en el ámbito del coding donde mas tarde lograría el puesto de PM.",
+            "tasksDev": {
+                "title": "Tareas como Developer",
+                "li1": "Desarrollo en Laravel 8.0 Monolitico",
+                "li2": "DB MySQL y PostgreSQL",
+                "li3": "Laravel Livewire",
+                "li4": "HTML/CSS/JS",
+                "li5": "Bootstrap"
+            },
+            "tasksPm": {
+                "title": "Tareas como Project Manager + Developer:",
+                "li1":"Analisis funcional",
+                "li2":"Documentación",
+                "li3":"Consultas contables en DB PostgreSQL",
+                "li4":"Control de versiones",
+                "li5":"Scripting en Python"
+            }
+        },
+        "vertis": {
+            "title" : "Desarrollo Vertis",
+            "subtitle": "Desarrollo de software para venta de publicidades radiales, web, y producciónes publicitarias varias.",
+            "tasks" : {
+                "title" : "Como Project Manager + Developer:",
+                "li1": "Analisis funcional y UX/UI",
+                "li2": "Backend Laravel 10",
+                "li3": "Frontend SvelteKit",
+                "li4": "API RESTful",
+                "li5": "Tailwind",
+                "li6": "DB en PostgreSQL"
+            }
+        },
+        "titleGithub" : "Actividad en Github",
+        "titleContact" : "Contacto"
+    }

@@ -4,7 +4,7 @@
 	export let src = '';
 </script>
 
-<div class="card flex flex-row bg-zinc-300 rounded-xl p-2 shadow-md shadow-red-700 m-4 hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-red-700 text-black">
+<div class="card flex flex-row bg-zinc-300 rounded-xl p-2 shadow-md  m-4 hover:scale-105 transition-transform duration-300 hover:shadow-2xl  text-black">
 	<div class="h-full flex items-center">
 		<img {src} alt="Logo escuela politécnica" class="rounded max-w-[8.75rem] max-h-[8.75rem] object-contain" />
 	</div>
@@ -18,7 +18,7 @@
             <div class='mb-4 ml-4'>
 			<slot name="content"/>
         </div>
-			<hr class="solid w-full" style="color: black;"/>
+			
 			<span class='italic'><slot name="period" /></span>
 		</div>
 	</div>

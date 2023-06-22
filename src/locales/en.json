@@ -1,0 +1,109 @@
+{
+    "title": "Alan Ascorti's Portfolio",
+    "presentation": "Hi! My name is Alan, and I'm a full stack developer jr. However, that's not the only thing I do, I also have 10 years of administrative experience (mostly in finance and accounting), and among my hobbies are playing the guitar, play videogames, mechanics and also design and industrial prototyping. I also have a development startup called Sixlabs where I provide accounting consulting, custom development for companies, and industrial 3D prototyping using Autodesk Fusion 360.",
+    "titleTechnologies" : "Technology Stack",
+    "titleToolkit":"Toolkit",
+    "titleStudies":"Studies",
+    "polimodalCard":{
+        "title":"Polimodal on electronics",
+        "li1":"PIC Programming in Assembly",
+        "li2":"General electronics",
+        "li3":"Electrical installations",
+        "li4":"Renewable Energy"
+    },
+    "argentinaProgramaCard":{
+        "title": "Coding bootcamp",
+        "li1":"Gobstones",
+        "li2":"Javascript",
+        "li3":"Ruby",
+        "li4":"HTML/CSS"
+    },
+    "openBootcampCertificationsCard":{
+        "title": "OpenBootcamp Certifications",
+        "li1":"Coding Foundations",
+        "li2":"Java",
+        "li4":"HTML/CSS"
+    },
+    "laracastsCard":{
+        "title": "Laravel 8 from Scratch",
+        "li1":"PHP",
+        "li2":"Laravel",
+        "li3":"Blade",
+        "li4":"MVC"
+    },
+    "javaDeveloperCard":{
+        "title": "Java Developer",
+        "li1":"HTML/CSS",
+        "li2":"Java",
+        "li3":"POO",
+        "li4":"MVC",
+        "li5":"Javascript",
+        "li6":"MySQL"
+    },
+    "udemyJavascriptCard":{
+        "title": "Learn JavaScript: Full-Stack from Scratch",
+        "li1":"HTML/CSS",
+        "li2":"Javascript",
+        "li3":"NodeJS",
+        "li4":"Axios",
+        "li5":"MongoDB"
+    },
+    "unpsjbCard":{
+        "title": "Licenciatura Informática",
+        "li1":"Algorithms",
+        "li2":"Java",
+        "li3":"Assembly"
+    },
+    "smysJob":{
+        "title": "General Administrative",
+        "subtitle": "General Administration including finance, accounting and analisis tasks.",
+        "tasks": {
+            "title": "Tasks",
+            "li1": "Office Suite",
+            "li2": "Client Accounts",
+            "li3": "Industrial Goods Adquisition",
+            "li4": "Payroll Management",
+            "li5": "Production registry",
+            "li6": "Cost Analysis",
+            "li7": "Tax reports",
+            "li8": "Autodesk Autocad 2D drawings",
+            "li9": "Autodesk Fusion 360 industrial design"
+        }
+    },
+    "titleExperiences": "Experiences",
+    "sisteFtth":{
+        "title": "SisteFTTH Project",
+        "subtitle": "I joined a team composed of a Project Manager (Tomás Musse) and a Fullstack Developer (Nicolás D'Andrea) whose goal was to achieve an integrated solution for the managing of a local ISP with a great growth rate. To this people i owe my first oportunity in the coding field, where later on i would achieve the position of PM.",
+        "tasksDev": {
+            "title": "Tasks as Developer",
+            "li1": "Monolitic Laravel 8.0 development",
+            "li2": "DB MySQL y PostgreSQL",
+            "li3": "Laravel Livewire",
+            "li4": "HTML/CSS/JS",
+            "li5": "Bootstrap"
+        },
+        "tasksPm": {
+            "title": "Tasks as Project Manager + Developer:",
+            "li1":"Functional analysis",
+            "li2":"Documentation",
+            "li3":"Accounting PostgreSQL Queries",
+            "li4":"Version control",
+            "li5":"Python Scripting"
+        }
+    },
+    "vertis": {
+        "title" : "Vertis Project",
+        "subtitle": "Software development for selling web and radio advertisements along with media production services.",
+        "tasks" : {
+            "title" : "Tasks as PM:",
+            "li1": "Functional and UX/UI Analysis",
+            "li2": "Laravel 10 Backend",
+            "li3": "SvelteKit Frontend",
+            "li4": "API RESTful",
+            "li5": "Tailwind",
+            "li6": "PostgreSQL DB"
+        }
+    },
+    "titleGithub" : "Github Activity",
+    "titleContact" : "Contact info"
+}
