@@ -37,9 +37,15 @@
 
   let language = "en"; // Default language
   let translations={};
+  
+ function getNavigatorLanguage() {
+    return navigator.language.substr(0, 2);
+  }
 
   onMount(() => {
 	GitHubCalendar(".calendar", "Lemonsix", { responsive: true });
+  language = getNavigatorLanguage();
+
     if (language === 'es') {
         translations = es;
     } else if (language === 'en') {
