@@ -34,6 +34,7 @@
 	import en from '../locales/en.json';
  import GitHubCalendar from 'github-calendar/dist/github-calendar.min.js';
   import PostmanLogo from "./components/atoms/logos/PostmanLogo.svelte";
+  import GolangLogo from "./components/atoms/logos/GolangLogo.svelte";
 
   let language = "en"; // Default language
   let translations={};
@@ -198,6 +199,16 @@
         <ul>
           <li>Scripting</li>
           <li>Data Logs</li>
+        </ul>
+      </div>
+    </Card>
+    <Card title="Go">
+      <div class="flex items-center" slot="icon">
+        <GolangLogo />
+      </div>
+      <div slot="content">
+        <ul>
+          <li>Microservices</li>
         </ul>
       </div>
     </Card>
