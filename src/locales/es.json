@@ -18,11 +18,17 @@
             "li3":"Ruby",
             "li4":"HTML/CSS"
         },
+        "argentinaProgramaMobileCard":{
+            "title": "Argentina Programa Mobile Apps",
+            "li1":"Kotlin",
+            "li2":"Android Studio",
+            "li3":"MVVM"
+        },
         "openBootcampCertificationsCard":{
             "title": "Certificaciones OpenBootcamp",
             "li1":"Fundamentos de Programacion",
             "li2":"Java",
-            "li4":"HTML/CSS"
+            "li3":"HTML/CSS"
         },
         "laracastsCard":{
             "title": "Laravel 8 from Scratch",
@@ -102,6 +108,20 @@
                 "li4": "API RESTful",
                 "li5": "Tailwind",
                 "li6": "DB en PostgreSQL"
+            }
+        },
+        "sentinel": {
+            "title" : "Sentinel Project",
+            "subtitle": "Servicio para gestión de reportes de tráfico y automatización de sanciones para ISPs",
+            "tasks" : {
+                "title" : "Tareas como PM y Dev:",
+                "li1": "Analisis Funcional",
+                "li2": "Django Backend",
+                "li3": "Celery, Celery Beats y Redis",
+                "li4": "SvelteKit Frontend",
+                "li5": "API RESTful",
+                "li6": "PostgreSQL 15 DB",
+                "li7": "Docker Deployment"
             }
         },
         "titleGithub" : "Actividad en Github",

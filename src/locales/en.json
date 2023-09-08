@@ -12,17 +12,23 @@
         "li4":"Renewable Energy"
     },
     "argentinaProgramaCard":{
-        "title": "Coding bootcamp",
+        "title": "Argentina Programa",
         "li1":"Gobstones",
         "li2":"Javascript",
         "li3":"Ruby",
         "li4":"HTML/CSS"
     },
+    "argentinaProgramaMobileCard":{
+        "title": "Argentina Programa Mobile Apps",
+        "li1":"Kotlin",
+        "li2":"Android Studio",
+        "li3":"MVVM"
+    },
     "openBootcampCertificationsCard":{
         "title": "OpenBootcamp Certifications",
         "li1":"Coding Foundations",
         "li2":"Java",
-        "li4":"HTML/CSS"
+        "li3":"HTML/CSS"
     },
     "laracastsCard":{
         "title": "Laravel 8 from Scratch",
@@ -101,9 +107,24 @@
             "li3": "SvelteKit Frontend",
             "li4": "API RESTful",
             "li5": "Tailwind",
-            "li6": "PostgreSQL DB"
+            "li6": "PostgreSQL 15 DB"
         }
     },
+    "sentinel": {
+        "title" : "Sentinel Project",
+        "subtitle": "Service for addressing abuse reports from international ISPs, client identification, and enforcement of appropriate sanctions.",
+        "tasks" : {
+            "title" : "Tasks as PM and Main dev:",
+            "li1": "Functional Analysis",
+            "li2": "Django Backend",
+            "li3": "Celery, Celery Beats and Redis",
+            "li4": "SvelteKit Frontend",
+            "li5": "API RESTful",
+            "li6": "PostgreSQL 15 DB",
+            "li7": "Docker Deployment"
+        }
+    },
+    
     "titleGithub" : "Github Activity",
     "titleContact" : "Contact info"
 }

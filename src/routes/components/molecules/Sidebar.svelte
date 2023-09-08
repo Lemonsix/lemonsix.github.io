@@ -11,7 +11,7 @@
 
 <aside class="fixed inset-y-0 left-0 w-48 ">
     <div class='flex items-center h-screen'>
-        <ul class='flex flex-col justify-evenly'>
+        <ul class='flex flex-col align-middle gap-3 mx-3'>
             <SidebarItem href={'#home'}> <Home/>Inicio</SidebarItem>
             <SidebarItem href={'#technologies'}> <Technologies/>Tecnologías</SidebarItem>
             <SidebarItem href={'#studies'}> <Studies/>Estudios</SidebarItem>

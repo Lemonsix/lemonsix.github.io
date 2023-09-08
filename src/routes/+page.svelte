@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   import H2 from "./components/atoms/H2.svelte";
   import Section from "./components/atoms/Section.svelte";
   import AutocadLogo from "./components/atoms/logos/AutocadLogo.svelte";
@@ -35,6 +37,8 @@
  import GitHubCalendar from 'github-calendar/dist/github-calendar.min.js';
   import PostmanLogo from "./components/atoms/logos/PostmanLogo.svelte";
   import GolangLogo from "./components/atoms/logos/GolangLogo.svelte";
+  import D3Logo from "./components/atoms/logos/D3Logo.svelte";
+  import DjangoLogo from "./components/atoms/logos/DjangoLogo.svelte";
 
   let language = "en"; // Default language
   let translations={};
@@ -212,6 +216,18 @@
         </ul>
       </div>
     </Card>
+    <Card title="Django">
+      <div class="flex items-center" slot="icon">
+        <DjangoLogo />
+      </div>
+      <div slot="content">
+        <ul>
+          <li>Backend Framework</li>
+          <li>MVC</li>
+          <li>Services</li>
+        </ul>
+      </div>
+    </Card>
   </TechnologiesGrid>
   <H2>{translations?.titleToolkit}</H2>
   <TechnologiesGrid>
@@ -267,6 +283,17 @@
         </ul>
       </div>
     </Card>
+    <Card title="D3">
+      <div class="flex items-center" slot="icon">
+        <D3Logo />
+      </div>
+      <div slot="content">
+        <ul>
+          <li>Data Visualization</li>
+        </ul>
+      </div>
+    </Card>
+    
   </TechnologiesGrid>
 </Section>
 <Section id="studies">
@@ -335,6 +362,15 @@
       </ul>
       <span slot="period">01/02/2015 - Incomplete</span>
     </StudiesCard>
+    <StudiesCard title={translations?.argentinaProgramaMobileCard?.title} place="Argentina Programa" src="/img/logos/logo_argprograma.png">
+      <ul slot="content" class="list-disc">
+        <li>{translations?.argentinaProgramaMobileCard?.title}</li>
+        <li>{translations?.argentinaProgramaMobileCard?.li1}</li>
+        <li>{translations?.argentinaProgramaMobileCard?.li2}</li>
+        <li>{translations?.argentinaProgramaMobileCard?.li3}</li>
+      </ul>
+      <span slot="period">01/08/2022 - 01/02/2023</span>
+    </StudiesCard>
   </StudiesGrid>
 </Section>
 <Section id="experience">
@@ -391,15 +427,20 @@
       </ul>
       <span slot="period">10/06/2023 - Currently</span>
     </ExperiencesHero>
+    <ExperiencesHero src="/img/logos/logo_sentinel.png" title={translations?.vertis?.title} place="LU17">
+      <p>{translations?.sentinel?.subtitle}</p>
+      <h3 class="font-bold text-lg">{translations?.sentinel?.tasks?.title}</h3>
+      <ul class="list-disc ml-4">
+        <li>{translations?.sentinel?.tasks?.li1}</li>
+        <li>{translations?.sentinel?.tasks?.li2}</li>
+        <li>{translations?.sentinel?.tasks?.li3}</li>
+        <li>{translations?.sentinel?.tasks?.li4}</li>
+        <li>{translations?.sentinel?.tasks?.li5}</li>
+        <li>{translations?.sentinel?.tasks?.li6}</li>
+      </ul>
+      <span slot="period">01/08/2023 - Currently</span>
+    </ExperiencesHero>
   </ExperiencesGrid>
-</Section>
-<Section>
-  <H2>{translations?.titleGithub}</H2>
-  <div class="calendar w-full lg:w-3/4 text-white">
-    <div class="flex text-center">
-      <Loader />
-    </div>
-  </div>
 </Section>
 <Section id="contact">
   <H2>{translations?.titleContact}</H2>
