@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Clino",
+    "description": "2 Mobile apps for people who cleans homes, elderly care and childcare services. Its currently published on Google Play.",
+    "stack": ["Expo", "Go", "PostgreSQL", "Redis"]
+  },
+  {
+    "name": "Candra",
+    "description": "Backoffice for the Fishing Industry.",
+    "stack": ["Nextjs", "Go", "PostgreSQL"]
+  }
+]

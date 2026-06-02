@@ -1,0 +1,14 @@
+[
+  { "name": "Microsoft Azure", "group": "technical" },
+  { "name": "Go", "group": "technical" },
+  { "name": "Software Architecture", "group": "technical" },
+  { "name": "Next.js", "group": "technical" },
+  { "name": "React", "group": "technical" },
+  { "name": "PostgreSQL", "group": "technical" },
+  { "name": "English (Full Professional)", "group": "language" },
+  { "name": "Spanish (Native or Bilingual)", "group": "language" },
+  {
+    "name": "Mobile Apps with Android Studio and Kotlin",
+    "group": "certification"
+  }
+]

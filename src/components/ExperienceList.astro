@@ -1,0 +1,32 @@
+---
+import type { Experience } from "../types/portfolio";
+
+interface Props {
+  items: Experience[];
+}
+
+const { items } = Astro.props;
+
+function formatPeriod(start: string, end: string | "present"): string {
+  const endLabel = end === "present" ? "PRESENT" : end;
+  return `${start} — ${endLabel}`;
+}
+---
+
+{
+  items.map((job) => (
+    <article class="entry">
+      <h3 class="entry-header">
+        {job.role} @ {job.company}
+      </h3>
+      <p class="entry-meta">
+        {formatPeriod(job.start, job.end)} | {job.location}
+      </p>
+      <ul>
+        {job.highlights.map((line) => (
+          <li>{line}</li>
+        ))}
+      </ul>
+    </article>
+  ))
+}

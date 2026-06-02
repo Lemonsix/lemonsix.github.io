@@ -1,0 +1,67 @@
+---
+import TerminalLayout from "../layouts/TerminalLayout.astro";
+import Section from "../components/Section.astro";
+import ProfileHeader from "../components/ProfileHeader.astro";
+import ExperienceList from "../components/ExperienceList.astro";
+import EducationList from "../components/EducationList.astro";
+import SkillsBlock from "../components/SkillsBlock.astro";
+import ProjectsList from "../components/ProjectsList.astro";
+import ContributionGraph from "../components/ContributionGraph.astro";
+
+import type {
+  Profile,
+  Experience,
+  Education,
+  Skill,
+  Project,
+} from "../types/portfolio";
+
+import profileData from "../data/profile.json";
+import experienceData from "../data/experience.json";
+import educationData from "../data/education.json";
+import skillsData from "../data/skills.json";
+import projectsData from "../data/projects.json";
+
+const profile = profileData as Profile;
+const experience = experienceData as Experience[];
+const education = educationData as Education[];
+const skills = skillsData as Skill[];
+const projects = projectsData as Project[];
+---
+
+<TerminalLayout title={`${profile.name} — portfolio`}>
+  <ProfileHeader profile={profile} />
+
+  <p class="separator">────────────────────────────────────────</p>
+
+  <Section title="EXPERIENCE">
+    <ExperienceList items={experience} />
+  </Section>
+
+  <p class="separator">────────────────────────────────────────</p>
+
+  <Section title="EDUCATION">
+    <EducationList items={education} />
+  </Section>
+
+  <p class="separator">────────────────────────────────────────</p>
+
+  <Section title="SKILLS">
+    <SkillsBlock items={skills} />
+  </Section>
+
+  <p class="separator">────────────────────────────────────────</p>
+
+  <Section title="PROJECTS">
+    <ProjectsList items={projects} />
+  </Section>
+
+  <p class="separator">────────────────────────────────────────</p>
+
+  <Section title="ACTIVITY">
+    <ContributionGraph />
+  </Section>
+
+  <p class="separator">────────────────────────────────────────</p>
+  <p class="kv-line"><span class="key">EOF</span> — session ended.</p>
+</TerminalLayout>

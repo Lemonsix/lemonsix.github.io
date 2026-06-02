@@ -1,0 +1,28 @@
+---
+import type { Education } from "../types/portfolio";
+
+interface Props {
+  items: Education[];
+}
+
+const { items } = Astro.props;
+
+function formatPeriod(item: Education): string {
+  const end = item.end ?? item.status ?? "—";
+  return `${item.start} — ${end}`;
+}
+---
+
+{
+  items.map((edu) => (
+    <article class="entry">
+      <h3 class="entry-header">{edu.institution}</h3>
+      <p class="entry-meta">{formatPeriod(edu)}</p>
+      <p>
+        {edu.program}
+        {edu.field ? ` · ${edu.field}` : ""}
+        {edu.status && !edu.end ? ` · ${edu.status}` : ""}
+      </p>
+    </article>
+  ))
+}

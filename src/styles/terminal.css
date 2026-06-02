@@ -1,0 +1,275 @@
+:root {
+  --bg: #000000;
+  --bg-muted: #0a0a0a;
+  --amber: #ffb000;
+  --amber-dim: #cc8800;
+  --amber-muted: #665000;
+  --border: #332200;
+  --contrib-0: #000000;
+  --contrib-1: #2a1f00;
+  --contrib-2: #5c4200;
+  --contrib-3: #a86f00;
+  --contrib-4: #ffb000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--amber);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "VT323", "Courier New", monospace;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  background: var(--bg);
+  color: var(--amber);
+}
+
+a {
+  color: var(--amber);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: #ffd966;
+}
+
+main {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+}
+
+.separator {
+  color: var(--amber-muted);
+  letter-spacing: 0.05em;
+  margin: 1.25rem 0;
+  user-select: none;
+}
+
+.section-prompt {
+  color: var(--amber);
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+}
+
+.section-prompt .cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.profile-name {
+  font-size: 1.75rem;
+  margin: 0 0 0.25rem;
+}
+
+.profile-headline {
+  color: var(--amber-dim);
+  margin: 0 0 0.5rem;
+}
+
+.profile-location {
+  color: var(--amber-muted);
+  margin: 0 0 1rem;
+}
+
+.profile-summary {
+  margin: 0 0 1rem;
+  max-width: 72ch;
+}
+
+.kv-line {
+  margin: 0.15rem 0;
+}
+
+.kv-line .key {
+  color: var(--amber-dim);
+}
+
+.entry {
+  margin-bottom: 1.25rem;
+}
+
+.entry-header {
+  margin: 0 0 0.35rem;
+}
+
+.entry-meta {
+  color: var(--amber-muted);
+  font-size: 1.1rem;
+  margin: 0 0 0.35rem;
+}
+
+.entry ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.entry li {
+  margin: 0.2rem 0;
+}
+
+.skill-group {
+  margin-bottom: 0.75rem;
+}
+
+.skill-group-title {
+  color: var(--amber-dim);
+  margin: 0 0 0.25rem;
+}
+
+.skill-tags {
+  margin: 0;
+}
+
+.project-stack {
+  color: var(--amber-muted);
+  font-size: 1.1rem;
+  margin: 0.15rem 0 0;
+}
+
+.contrib-wrap {
+  overflow: visible;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.contrib-grid {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+}
+
+.contrib-week {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.contrib-cell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0;
+  border: none;
+  background: var(--contrib-0);
+  cursor: default;
+}
+
+.contrib-popover {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  z-index: 20;
+  transform: translateX(-50%) translateY(4px);
+  padding: 0.2rem 0.45rem;
+  border: 1px solid var(--amber-dim);
+  background: var(--bg);
+  color: var(--amber);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease, transform 0.12s ease, visibility 0.12s;
+}
+
+.contrib-cell:hover .contrib-popover,
+.contrib-cell:focus-visible .contrib-popover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.contrib-cell.level-0 {
+  background: var(--contrib-0);
+}
+
+.contrib-cell.level-1 {
+  background: var(--contrib-1);
+}
+
+.contrib-cell.level-2 {
+  background: var(--contrib-2);
+}
+
+.contrib-cell.level-3 {
+  background: var(--contrib-3);
+}
+
+.contrib-cell.level-4 {
+  background: var(--contrib-4);
+}
+
+.contrib-cell.contrib-empty {
+  background: transparent;
+}
+
+.contrib-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: var(--amber-muted);
+}
+
+.contrib-legend .contrib-cell {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.contrib-error {
+  color: var(--amber-dim);
+}
+
+.contrib-stats {
+  color: var(--amber-muted);
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.contrib-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  color: var(--amber-dim);
+}
+
+.contrib-loading-text {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.contrib-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--amber-muted);
+  border-top-color: var(--amber);
+  animation: contrib-spin 0.7s linear infinite;
+}
+
+@keyframes contrib-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

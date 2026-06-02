@@ -1,0 +1,50 @@
+[
+  {
+    "company": "Contarg",
+    "role": "Lead Developer",
+    "start": "2023-11",
+    "end": "present",
+    "location": "Puerto Madryn, Chubut, Argentina",
+    "highlights": [
+      "E2E backoffice software for Broker Dealers: compliance, broker operations, reporting.",
+      "Multitenancy SaaS with microservices hosted on Azure.",
+      "Health management systems",
+      "MCP and chatbots",
+      "100+ repositories, mostly microservices written in Go"
+    ]
+  },
+  {
+    "company": "Red Uno",
+    "role": "Lead Developer",
+    "start": "2023-05",
+    "end": "2023-10",
+    "location": "Puerto Madryn, Chubut, Argentina",
+    "highlights": [
+      "Vertis: digital and radio advertisement sales — functional analysis, UX/UI, full stack.",
+      "SvelteKit frontend, Laravel 10 backend, PostgreSQL 15.",
+      "Sentinel: service to read abuse-report emails from ISP users and apply penalties and filters to illegal network traffic."
+    ]
+  },
+  {
+    "company": "Red Uno",
+    "role": "Full stack Developer",
+    "start": "2023-01",
+    "end": "2023-06",
+    "location": "Puerto Madryn, Chubut, Argentina",
+    "highlights": [
+      "Backoffice systems with PHP, Laravel, MySQL, JavaScript, and related technologies."
+    ]
+  },
+  {
+    "company": "Pesquera SM&S S.R.L",
+    "role": "General Management",
+    "start": "2013-05",
+    "end": "2023-02",
+    "location": "Puerto Madryn, Chubut, Argentina",
+    "highlights": [
+      "Customer and supplier communication, payroll, taxes, legal communications.",
+      "Software requirements, data flow optimization, production and accounting statistics.",
+      "IT maintenance and installation."
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+---
+import type { Profile } from "../types/portfolio";
+
+interface Props {
+  profile: Profile;
+}
+
+const { profile } = Astro.props;
+const { contact } = profile;
+---
+
+<header>
+  <h1 class="profile-name">{profile.name}</h1>
+  <p class="profile-headline">{profile.headline}</p>
+  <p class="profile-location">LOC: {profile.location}</p>
+  <p class="profile-summary">{profile.summary}</p>
+  <div class="contact">
+    <p class="kv-line"><span class="key">EMAIL:</span> <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+    <p class="kv-line"><span class="key">PHONE:</span> {contact.phone}</p>
+    <p class="kv-line"><span class="key">LINKEDIN:</span> <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">agascorti</a></p>
+    <p class="kv-line"><span class="key">GITHUB:</span> <a href={contact.github} target="_blank" rel="noopener noreferrer">lemonsix</a></p>
+  </div>
+</header>

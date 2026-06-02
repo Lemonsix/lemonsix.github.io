@@ -1,0 +1,12 @@
+{
+  "name": "Alan Gabriel Ascorti",
+  "headline": "SSR Full stack dev | Go | Azure | Next.js | React | PostgreSQL",
+  "location": "Argentina",
+  "summary": "Hi! My name is Alan. I work full time as a fullstack developer mainly with Go and Nextjs. I speak English and Spanish. Hobbies include industrial design, playing guitar, and videogames. Side projects on Expo + React Native; experience with MCPs and AI POCs.",
+  "contact": {
+    "email": "alan.g.asc@gmail.com",
+    "phone": "+54 9 280 4958841",
+    "linkedin": "https://www.linkedin.com/in/agascorti",
+    "github": "https://github.com/lemonsix"
+  }
+}

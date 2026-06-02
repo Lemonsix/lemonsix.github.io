@@ -1,0 +1,32 @@
+---
+import type { Skill, SkillGroup } from "../types/portfolio";
+
+interface Props {
+  items: Skill[];
+}
+
+const { items } = Astro.props;
+
+const labels: Record<SkillGroup, string> = {
+  technical: "TECHNICAL",
+  language: "LANGUAGES",
+  certification: "CERTIFICATIONS",
+};
+
+const groups = (["technical", "language", "certification"] as SkillGroup[]).map(
+  (group) => ({
+    group,
+    label: labels[group],
+    skills: items.filter((s) => s.group === group),
+  }),
+).filter((g) => g.skills.length > 0);
+---
+
+{
+  groups.map(({ label, skills }) => (
+    <div class="skill-group">
+      <p class="skill-group-title">{label}</p>
+      <p class="skill-tags">{skills.map((s) => s.name).join(" · ")}</p>
+    </div>
+  ))
+}
