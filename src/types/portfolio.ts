@@ -9,7 +9,7 @@ export interface Profile {
   name: string;
   headline: string;
   location: string;
-  summary: string;
+  summary: string[];
   contact: Contact;
 }
 
@@ -22,16 +22,7 @@ export interface Experience {
   highlights: string[];
 }
 
-export interface Education {
-  institution: string;
-  program: string;
-  field?: string;
-  start: string;
-  end?: string;
-  status?: string;
-}
-
-export type SkillGroup = "technical" | "language" | "certification";
+export type SkillGroup = "technical" | "domains" | "language" | "certification";
 
 export interface Skill {
   name: string;
@@ -42,6 +33,7 @@ export interface Project {
   name: string;
   description: string;
   stack: string[];
+  highlights?: string[];
   url?: string;
 }
 

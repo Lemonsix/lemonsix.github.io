@@ -6,11 +6,11 @@
     "end": "present",
     "location": "Puerto Madryn, Chubut, Argentina",
     "highlights": [
-      "E2E backoffice software for Broker Dealers: compliance, broker operations, reporting.",
-      "Multitenancy SaaS with microservices hosted on Azure.",
-      "Health management systems",
-      "MCP and chatbots",
-      "100+ repositories, mostly microservices written in Go"
+      "Lead architecture and development of a multitenant SaaS platform for broker-dealers, compliance, and reporting — treasury and fiscal operations, healthcare, logistics, capital markets, credit risk, stock, billing, and omnichannel workflows across 100+ repositories on Azure.",
+      "Go microservice backends follow hexagonal architecture; Alycs is a monolithic Go backend with a separate Next.js frontend integrating Estudio Gallo, BYMA, and Primary APIs.",
+      "Domain modeling and integrations: Auth (tenants, invites, RBAC/ABAC), Core entity registry, Tesorería (AR/AP, Interbanking, ARCA invoicing sync), Salud, Booking, Stock, Omnicanal (AI + MCP), Préstamos, Cars, Logística, and related services.",
+      "Platform patterns: row-level multitenancy, event sourcing on selected services, outbox for Omnicanal async delivery to Meta APIs, and internal M2M SDKs for service communication and security.",
+      "Observability and production: structured logs, Jaeger error tracing and latency sampling, code reviews, schema migrations, and Azure log triage."
     ]
   },
   {
@@ -20,19 +20,19 @@
     "end": "2023-10",
     "location": "Puerto Madryn, Chubut, Argentina",
     "highlights": [
-      "Vertis: digital and radio advertisement sales — functional analysis, UX/UI, full stack.",
+      "Led Vertis: digital and radio advertisement sales — operational workflows, functional analysis, UX/UI, and full product delivery.",
       "SvelteKit frontend, Laravel 10 backend, PostgreSQL 15.",
-      "Sentinel: service to read abuse-report emails from ISP users and apply penalties and filters to illegal network traffic."
+      "Built Sentinel: service that ingests ISP abuse-report emails and applies penalties and filters to illegal network traffic."
     ]
   },
   {
     "company": "Red Uno",
-    "role": "Full stack Developer",
+    "role": "Software Developer",
     "start": "2023-01",
-    "end": "2023-06",
+    "end": "2023-04",
     "location": "Puerto Madryn, Chubut, Argentina",
     "highlights": [
-      "Backoffice systems with PHP, Laravel, MySQL, JavaScript, and related technologies."
+      "Backoffice systems with PHP, Laravel, MySQL, and JavaScript; promoted to Lead Developer in May 2023."
     ]
   },
   {
@@ -42,9 +42,8 @@
     "end": "2023-02",
     "location": "Puerto Madryn, Chubut, Argentina",
     "highlights": [
-      "Customer and supplier communication, payroll, taxes, legal communications.",
-      "Software requirements, data flow optimization, production and accounting statistics.",
-      "IT maintenance and installation."
+      "Operational and business management before transitioning to software engineering: accounting workflows, customer and supplier operations, payroll and tax compliance, production and accounting statistics.",
+      "Defined software requirements and optimized data flows — background that informs domain-driven design, correct business rules, and operational UX over pure technical novelty."
     ]
   }
 ]

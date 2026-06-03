@@ -1,8 +1,12 @@
 {
   "name": "Alan Gabriel Ascorti",
-  "headline": "SSR Full stack dev | Go | Azure | Next.js | React | PostgreSQL",
+  "headline": "Software Architect · Domain-driven backends · Multitenant SaaS on Azure | Go",
   "location": "Argentina",
-  "summary": "Hi! My name is Alan. I work full time as a fullstack developer mainly with Go and Nextjs. I speak English and Spanish. Hobbies include industrial design, playing guitar, and videogames. Side projects on Expo + React Native; experience with MCPs and AI POCs.",
+  "summary": [
+    "Software architect specialized in translating complex business domains — finance, compliance, healthcare, logistics, and operations — into scalable, maintainable multitenant systems.",
+    "Lead Developer at Contarg: multitenant SaaS for broker-dealers, compliance, and reporting. Business areas include treasury and fiscal workflows, capital markets (BYMA, Primary), healthcare scheduling, logistics, credit risk, and omnichannel operations. Go microservices use hexagonal architecture on Azure Container Apps with PostgreSQL; Alycs is a monolithic Go backend with a separate Next.js frontend. Next.js apps on Vercel.",
+    "End-to-end ownership: architecture, implementation, code reviews, database migrations, and production triage with Jaeger. A decade of operational and accounting management before software engineering informs how I model domains, business rules, and operational UX."
+  ],
   "contact": {
     "email": "alan.g.asc@gmail.com",
     "phone": "+54 9 280 4958841",

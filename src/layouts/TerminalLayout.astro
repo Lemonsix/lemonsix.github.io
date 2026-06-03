@@ -1,11 +1,17 @@
 ---
 import "../styles/terminal.css";
+import type { Profile, Skill } from "../types/portfolio";
+import { metaDescription, personJsonLd } from "../lib/seo";
 
 interface Props {
   title: string;
+  profile: Profile;
+  skills: Skill[];
 }
 
-const { title } = Astro.props;
+const { title, profile, skills } = Astro.props;
+const description = metaDescription(profile);
+const jsonLd = personJsonLd(profile, skills);
 ---
 
 <!doctype html>
@@ -15,7 +21,8 @@ const { title } = Astro.props;
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="Alan Gabriel Ascorti — portfolio" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://lemonsix.github.io/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,6 +30,7 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <main>

@@ -1,12 +1,31 @@
 [
   {
+    "name": "Six Labs",
+    "description": "Industrial design venture: 3D printing and metal part machining.",
+    "stack": ["Industrial Design", "3D Printing", "Metal Machining"],
+    "highlights": [
+      "Entrepreneurship applying design and fabrication to real-world parts and prototypes.",
+      "3D printing for rapid iteration; current focus on machining metal components."
+    ]
+  },
+  {
     "name": "Clino",
-    "description": "2 Mobile apps for people who cleans homes, elderly care and childcare services. Its currently published on Google Play.",
-    "stack": ["Expo", "Go", "PostgreSQL", "Redis"]
+    "description": "Mobile platform for home cleaning, elderly care, and childcare services.",
+    "stack": ["Expo", "React Native", "Go", "PostgreSQL", "Redis"],
+    "highlights": [
+      "Domain: domestic and care services — scheduling and role-specific flows for workers and clients.",
+      "Two published Android apps on Google Play; Go API with PostgreSQL and Redis.",
+      "End-to-end product delivery from backend contracts to mobile UX."
+    ]
   },
   {
     "name": "Candra",
-    "description": "Backoffice for the Fishing Industry.",
-    "stack": ["Nextjs", "Go", "PostgreSQL"]
+    "description": "Backoffice for the fishing industry.",
+    "stack": ["Next.js", "Go", "PostgreSQL"],
+    "highlights": [
+      "Domain: fishing-industry operations — entities, production, and reporting workflows.",
+      "Next.js admin UI over a Go backend and PostgreSQL data model.",
+      "Clear API boundaries between operational UI and backend services."
+    ]
   }
 ]

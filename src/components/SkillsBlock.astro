@@ -9,11 +9,14 @@ const { items } = Astro.props;
 
 const labels: Record<SkillGroup, string> = {
   technical: "TECHNICAL",
+  domains: "DOMAIN EXPERTISE",
   language: "LANGUAGES",
   certification: "CERTIFICATIONS",
 };
 
-const groups = (["technical", "language", "certification"] as SkillGroup[]).map(
+const groups = (
+  ["technical", "domains", "language", "certification"] as SkillGroup[]
+).map(
   (group) => ({
     group,
     label: labels[group],

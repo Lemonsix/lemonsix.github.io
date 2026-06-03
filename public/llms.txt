@@ -1,0 +1,28 @@
+# Alan Gabriel Ascorti — Portfolio
+
+> https://lemonsix.github.io/
+
+## Summary
+
+Software Architect · Domain-driven backends · Multitenant SaaS on Azure | Go
+
+Software architect specialized in translating complex business domains — finance, compliance, healthcare, logistics, and operations — into scalable, maintainable multitenant systems.
+
+Lead Developer at Contarg: broker-dealer SaaS with treasury/fiscal workflows, capital markets, healthcare, logistics, and omnichannel operations. Go microservices use hexagonal architecture on Azure; Alycs is a monolithic Go backend with separate Next.js frontend. Row-level multitenancy, event sourcing (subset), outbox for Meta APIs, Jaeger observability.
+
+## Sections on site
+
+- EXPERIENCE: work history with business-first, impact-focused bullets
+- SKILLS: technical, domain expertise, languages, certifications
+- PERSONAL PROJECTS: Six Labs, Clino, Candra
+- ACTIVITY: GitHub contribution graph
+
+## Contact
+
+- Email: alan.g.asc@gmail.com
+- LinkedIn: https://www.linkedin.com/in/agascorti
+- GitHub: https://github.com/lemonsix
+
+## Machine-readable data
+
+Structured content lives in the built HTML page and JSON-LD Person schema in the document head. Source data is maintained in the portfolio repository under src/data/.

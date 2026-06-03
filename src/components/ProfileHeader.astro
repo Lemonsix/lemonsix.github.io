@@ -13,7 +13,11 @@ const { contact } = profile;
   <h1 class="profile-name">{profile.name}</h1>
   <p class="profile-headline">{profile.headline}</p>
   <p class="profile-location">LOC: {profile.location}</p>
-  <p class="profile-summary">{profile.summary}</p>
+  <div class="profile-summary">
+    {profile.summary.map((paragraph) => (
+      <p>{paragraph}</p>
+    ))}
+  </div>
   <div class="contact">
     <p class="kv-line"><span class="key">EMAIL:</span> <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
     <p class="kv-line"><span class="key">PHONE:</span> {contact.phone}</p>

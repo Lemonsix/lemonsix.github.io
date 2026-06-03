@@ -21,6 +21,13 @@ const { items } = Astro.props;
         )}
       </h3>
       <p>{project.description}</p>
+      {project.highlights && project.highlights.length > 0 && (
+        <ul>
+          {project.highlights.map((line) => (
+            <li>{line}</li>
+          ))}
+        </ul>
+      )}
       <p class="project-stack">[{project.stack.join(" · ")}]</p>
     </article>
   ))

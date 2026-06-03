@@ -92,6 +92,14 @@ main {
   max-width: 72ch;
 }
 
+.profile-summary p {
+  margin: 0 0 0.75rem;
+}
+
+.profile-summary p:last-child {
+  margin-bottom: 0;
+}
+
 .kv-line {
   margin: 0.15rem 0;
 }
