@@ -1,16 +1,18 @@
-<div class="contrib-shell" data-username="lemonsix">
-  <div class="contrib-loading" aria-live="polite" aria-busy="true">
-    <p class="contrib-loading-text">
-      &gt; FETCHING_ACTIVITY<span class="cursor">_</span>
-    </p>
-    <div class="contrib-spinner" aria-hidden="true"></div>
+<section class="contrib-shell" data-username="lemonsix">
+  <div class="contrib-content">
+    <div class="contrib-loading" aria-live="polite" aria-busy="true">
+      <p class="contrib-loading-text">Loading contribution graph…</p>
+      <div class="contrib-spinner" aria-hidden="true"></div>
+    </div>
   </div>
-  <div class="contrib-content" hidden></div>
-</div>
+</section>
 
 <script>
-  import { loadContributions } from "../lib/contributions-client";
+  import { loadContributions } from "@/lib/contributions-client";
 
-  const root = document.querySelector<HTMLElement>(".contrib-shell");
-  if (root) loadContributions(root);
+  for (const root of document.querySelectorAll<HTMLElement>(".contrib-shell")) {
+    if (root.dataset.loaded === "true") continue;
+    root.dataset.loaded = "true";
+    loadContributions(root);
+  }
 </script>

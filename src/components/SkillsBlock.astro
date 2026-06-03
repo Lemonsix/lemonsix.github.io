@@ -1,5 +1,5 @@
 ---
-import type { Skill, SkillGroup } from "../types/portfolio";
+import type { Skill, SkillGroup } from "@/types/portfolio";
 
 interface Props {
   items: Skill[];
@@ -8,28 +8,61 @@ interface Props {
 const { items } = Astro.props;
 
 const labels: Record<SkillGroup, string> = {
-  technical: "TECHNICAL",
-  domains: "DOMAIN EXPERTISE",
-  language: "LANGUAGES",
-  certification: "CERTIFICATIONS",
+  technical: "Technical",
+  domains: "Domain expertise",
+  language: "Languages",
+  certification: "Certifications",
 };
 
 const groups = (
   ["technical", "domains", "language", "certification"] as SkillGroup[]
-).map(
-  (group) => ({
+)
+  .map((group) => ({
     group,
     label: labels[group],
     skills: items.filter((s) => s.group === group),
-  }),
-).filter((g) => g.skills.length > 0);
+  }))
+  .filter((g) => g.skills.length > 0);
 ---
 
-{
-  groups.map(({ label, skills }) => (
-    <div class="skill-group">
-      <p class="skill-group-title">{label}</p>
-      <p class="skill-tags">{skills.map((s) => s.name).join(" · ")}</p>
-    </div>
-  ))
-}
+<div class="skills">
+  {
+    groups.map(({ label, skills }) => (
+      <section class="skill-group">
+        <h3 class="section-label">{label}</h3>
+        <p class="skill-list">{skills.map((skill) => skill.name).join(" · ")}</p>
+      </section>
+    ))
+  }
+</div>
+
+<style>
+  .skills {
+    margin-bottom: 88px;
+  }
+  .skill-group {
+    margin-bottom: 48px;
+  }
+  .skill-group:last-child {
+    margin-bottom: 0;
+  }
+  .skill-list {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.75;
+    color: hsl(var(--theme-text));
+    text-wrap: pretty;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 420px) {
+    .skills {
+      margin-bottom: 56px;
+    }
+    .skill-list {
+      font-size: 16.5px;
+    }
+  }
+</style>

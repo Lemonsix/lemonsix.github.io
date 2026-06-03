@@ -1,61 +1,77 @@
 ---
-import TerminalLayout from "../layouts/TerminalLayout.astro";
-import Section from "../components/Section.astro";
-import ProfileHeader from "../components/ProfileHeader.astro";
-import ExperienceList from "../components/ExperienceList.astro";
-import SkillsBlock from "../components/SkillsBlock.astro";
-import ProjectsList from "../components/ProjectsList.astro";
-import ContributionGraph from "../components/ContributionGraph.astro";
+import Base from "@/layouts/Base.astro";
+import Hero from "@/components/Hero.astro";
+import ExperienceList from "@/components/ExperienceList.astro";
+import SkillsBlock from "@/components/SkillsBlock.astro";
+import ProjectsList from "@/components/ProjectsList.astro";
+import ContributionGraph from "@/components/ContributionGraph.astro";
 
 import type {
   Profile,
   Experience,
   Skill,
   Project,
-} from "../types/portfolio";
+} from "@/types/portfolio";
 
-import profileData from "../data/profile.json";
-import experienceData from "../data/experience.json";
-import skillsData from "../data/skills.json";
-import projectsData from "../data/projects.json";
+import profileData from "@/data/profile.json";
+import experienceData from "@/data/experience.json";
+import skillsData from "@/data/skills.json";
+import projectsData from "@/data/projects.json";
+
+import { metaDescription, personJsonLd } from "@/lib/seo";
 
 const profile = profileData as Profile;
 const experience = experienceData as Experience[];
 const skills = skillsData as Skill[];
 const projects = projectsData as Project[];
+
+const jsonLd = personJsonLd(profile, skills);
 ---
 
-<TerminalLayout
-  title={`${profile.name} — portfolio`}
-  profile={profile}
-  skills={skills}
+<Base
+  meta={{
+    title: "Portfolio",
+    description: metaDescription(profile),
+  }}
+  jsonLd={jsonLd}
 >
-  <ProfileHeader profile={profile} />
+  <Hero profile={profile} />
 
-  <p class="separator">────────────────────────────────────────</p>
-
-  <Section title="EXPERIENCE">
+  <section class="writing">
+    <h2 class="section-label">Experience</h2>
     <ExperienceList items={experience} />
-  </Section>
+  </section>
 
-  <p class="separator">────────────────────────────────────────</p>
+  <SkillsBlock items={skills} />
 
-  <Section title="SKILLS">
-    <SkillsBlock items={skills} />
-  </Section>
-
-  <p class="separator">────────────────────────────────────────</p>
-
-  <Section title="PERSONAL PROJECTS">
+  <section class="work">
+    <h2 class="section-label">Personal projects</h2>
     <ProjectsList items={projects} />
-  </Section>
+  </section>
 
-  <p class="separator">────────────────────────────────────────</p>
-
-  <Section title="ACTIVITY">
+  <section class="activity">
+    <h2 class="section-label">Activity</h2>
     <ContributionGraph />
-  </Section>
+  </section>
+</Base>
 
-  <p class="separator">────────────────────────────────────────</p>
-  <p class="kv-line"><span class="key">EOF</span> — session ended.</p>
-</TerminalLayout>
+<style>
+  .writing {
+    margin-bottom: 96px;
+  }
+  .work {
+    margin-bottom: 88px;
+  }
+  .activity {
+    margin-bottom: 64px;
+  }
+
+  @media (max-width: 720px) {
+    .writing {
+      margin-bottom: 64px;
+    }
+    .work {
+      margin-bottom: 56px;
+    }
+  }
+</style>

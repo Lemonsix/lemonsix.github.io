@@ -1,0 +1,64 @@
+---
+import { siteConfig } from "@/site.config";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="left">
+    <span>© {year} {siteConfig.author}</span>
+    {!siteConfig.hideThemeCredit && (
+      <span class="theme-credit">
+        Powered by{" "}
+        <a
+          href="https://github.com/AnjayGoel/astro-sienna"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Astro Sienna
+        </a>
+      </span>
+    )}
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--hairline);
+    padding-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: var(--font-sans);
+    font-size: 12.5px;
+    color: hsl(var(--theme-text) / 0.72);
+    transition: border-color 0.35s ease;
+  }
+  .site-footer .left {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .site-footer .theme-credit {
+    font-size: 11.5px;
+    color: hsl(var(--theme-text) / 0.55);
+  }
+  .site-footer .theme-credit a {
+    color: inherit;
+    border-bottom: 1px dotted hsl(var(--theme-text) / 0.35);
+  }
+  .site-footer .theme-credit a:hover {
+    color: hsl(var(--theme-accent));
+    border-bottom-color: currentColor;
+  }
+
+  @media (max-width: 420px) {
+    .site-footer {
+      font-size: 11.5px;
+      gap: 12px;
+    }
+  }
+</style>

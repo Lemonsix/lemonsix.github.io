@@ -1,32 +1,75 @@
 ---
-import type { Experience } from "../types/portfolio";
+import type { Experience } from "@/types/portfolio";
+import { formatExperiencePeriod } from "@/utils/date";
 
 interface Props {
   items: Experience[];
 }
 
 const { items } = Astro.props;
-
-function formatPeriod(start: string, end: string | "present"): string {
-  const endLabel = end === "present" ? "PRESENT" : end;
-  return `${start} — ${endLabel}`;
-}
 ---
 
-{
-  items.map((job) => (
-    <article class="entry">
-      <h3 class="entry-header">
-        {job.role} @ {job.company}
-      </h3>
-      <p class="entry-meta">
-        {formatPeriod(job.start, job.end)} | {job.location}
-      </p>
-      <ul>
-        {job.highlights.map((line) => (
-          <li>{line}</li>
-        ))}
-      </ul>
-    </article>
-  ))
-}
+<div class="timeline experience-timeline">
+  {
+    items.map((job) => (
+      <article class="post">
+        <div class="post-rail">
+          <time class="post-date" datetime={`${job.start}/${job.end}`}>
+            {formatExperiencePeriod(job.start, job.end)}
+          </time>
+          <span class="post-dot" aria-hidden="true" />
+        </div>
+        <div class="post-body">
+          <h3 class="post-title">
+            {job.role} @ {job.company}
+          </h3>
+          <p class="post-meta">{job.location}</p>
+          <ul class="post-highlights">
+            {job.highlights.map((line) => (
+              <li>{line}</li>
+            ))}
+          </ul>
+        </div>
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  .experience-timeline {
+    --rail-width: 128px;
+  }
+  .experience-timeline .post-date {
+    white-space: normal;
+  }
+  .post-meta {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: hsl(var(--theme-text) / 0.72);
+    margin: 0 0 12px;
+  }
+  .post-highlights {
+    list-style: disc;
+    list-style-position: outside;
+    margin: 0;
+    padding-left: 1.1em;
+    font-size: 16px;
+    line-height: 1.55;
+    color: hsl(var(--theme-text-muted));
+  }
+  .post-highlights li {
+    margin-bottom: 8px;
+    text-wrap: pretty;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+  .post-highlights li:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 420px) {
+    .post-highlights {
+      font-size: 15px;
+    }
+  }
+</style>

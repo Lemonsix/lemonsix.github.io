@@ -1,0 +1,128 @@
+---
+import type { Profile } from "@/types/portfolio";
+
+interface Props {
+  profile: Profile;
+}
+
+const { profile } = Astro.props;
+const { contact } = profile;
+---
+
+<section class="hero">
+  <p class="hero-headline">{profile.headline}</p>
+  <p class="hero-location">{profile.location}</p>
+  {profile.summary.map((paragraph) => <p>{paragraph}</p>)}
+  <p class="socials">
+    {
+      contact.github && (
+        <>
+          <a href={contact.github} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <span class="sep">·</span>
+        </>
+      )
+    }
+    {
+      contact.linkedin && (
+        <>
+          <a
+            href={contact.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <span class="sep">·</span>
+        </>
+      )
+    }
+    {
+      contact.email && (
+        <>
+          <a href={`mailto:${contact.email}`}>Email</a>
+          <span class="sep">·</span>
+        </>
+      )
+    }
+    {contact.phone && <a href={`tel:${contact.phone}`}>{contact.phone}</a>}
+  </p>
+</section>
+
+<style>
+  .hero {
+    margin-bottom: 88px;
+  }
+  .hero-headline {
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: hsl(var(--theme-text-muted));
+    margin: 0 0 8px;
+  }
+  .hero-location {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: hsl(var(--theme-text) / 0.72);
+    margin: 0 0 28px;
+  }
+  .hero p:not(.hero-headline):not(.hero-location):not(.socials) {
+    font-size: 19.5px;
+    line-height: 1.65;
+    color: hsl(var(--theme-text));
+    margin: 0 0 22px;
+    max-width: 60ch;
+    text-wrap: pretty;
+  }
+  .socials {
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    color: hsl(var(--theme-text) / 0.72);
+    margin-top: 18px;
+  }
+  .socials a {
+    color: hsl(var(--theme-text-muted));
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--theme-text) / 0.35);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition:
+      color 0.2s ease,
+      text-decoration-color 0.2s ease;
+  }
+  .socials a:hover {
+    color: hsl(var(--theme-accent));
+    text-decoration-color: hsl(var(--theme-accent));
+  }
+  .socials .sep {
+    color: var(--faint);
+    margin: 0 9px;
+  }
+
+  @media (max-width: 720px) {
+    .hero {
+      margin-bottom: 64px;
+    }
+    .hero p:not(.hero-headline):not(.hero-location):not(.socials) {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .hero {
+      margin-bottom: 48px;
+    }
+    .hero p:not(.hero-headline):not(.hero-location):not(.socials) {
+      font-size: 17px;
+    }
+    .socials {
+      font-size: 12.5px;
+    }
+    .socials .sep {
+      margin: 0 6px;
+    }
+  }
+</style>

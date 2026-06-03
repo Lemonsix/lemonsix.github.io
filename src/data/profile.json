@@ -3,9 +3,9 @@
   "headline": "Software Architect · Domain-driven backends · Multitenant SaaS on Azure | Go",
   "location": "Argentina",
   "summary": [
-    "Software architect specialized in translating complex business domains — finance, compliance, healthcare, logistics, and operations — into scalable, maintainable multitenant systems.",
-    "Lead Developer at Contarg: multitenant SaaS for broker-dealers, compliance, and reporting. Business areas include treasury and fiscal workflows, capital markets (BYMA, Primary), healthcare scheduling, logistics, credit risk, and omnichannel operations. Go microservices use hexagonal architecture on Azure Container Apps with PostgreSQL; Alycs is a monolithic Go backend with a separate Next.js frontend. Next.js apps on Vercel.",
-    "End-to-end ownership: architecture, implementation, code reviews, database migrations, and production triage with Jaeger. A decade of operational and accounting management before software engineering informs how I model domains, business rules, and operational UX."
+    "Software architect specialized in translating complex business domains into scalable, maintainable multitenant systems.",
+    "Current Lead Developer at Contarg: 100+ Go microservices and internal M2M SDKs on Azure Container Apps + PostgreSQL Cluster, with Next.js frontends on Vercel.",
+    "A decade of operational and accounting management before software engineering informs how I model domains, business rules, and operational UX."
   ],
   "contact": {
     "email": "alan.g.asc@gmail.com",

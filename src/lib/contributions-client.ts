@@ -56,7 +56,7 @@ function renderGraph(data: ContributionData): string {
     .join("");
 
   return `
-    <p class="contrib-stats">TOTAL_CONTRIBUTIONS (last year): ${data.total}</p>
+    <p class="contrib-stats">${data.total} contributions in the last year</p>
     <div class="contrib-wrap">
       <div class="contrib-grid" role="img" aria-label="GitHub contribution calendar">
         ${weeksHtml}
@@ -74,28 +74,32 @@ function renderGraph(data: ContributionData): string {
   `;
 }
 
+function renderLoading(): string {
+  return `
+    <div class="contrib-loading" aria-live="polite" aria-busy="true">
+      <p class="contrib-loading-text">Loading contribution graph…</p>
+      <div class="contrib-spinner" aria-hidden="true"></div>
+    </div>
+  `;
+}
+
+function renderError(): string {
+  return '<p class="contrib-error">Unable to load activity graph.</p>';
+}
+
 export async function loadContributions(root: HTMLElement): Promise<void> {
   const username = root.dataset.username ?? "lemonsix";
-  const loading = root.querySelector<HTMLElement>(".contrib-loading");
   const content = root.querySelector<HTMLElement>(".contrib-content");
 
-  if (!loading || !content) return;
+  if (!content) return;
+
+  content.innerHTML = renderLoading();
 
   try {
     const days = await fetchContributions(username);
     const data = days ? buildContributionData(days) : null;
-
-    if (!data) {
-      content.innerHTML =
-        '<p class="contrib-error">&gt; ERROR: unable to load activity graph</p>';
-    } else {
-      content.innerHTML = renderGraph(data);
-    }
+    content.innerHTML = data ? renderGraph(data) : renderError();
   } catch {
-    content.innerHTML =
-      '<p class="contrib-error">&gt; ERROR: unable to load activity graph</p>';
-  } finally {
-    loading.hidden = true;
-    content.hidden = false;
+    content.innerHTML = renderError();
   }
 }

@@ -1,0 +1,48 @@
+---
+import { siteConfig } from "@/site.config";
+import ThemeToggle from "../ThemeToggle.astro";
+---
+
+<header class="site-header">
+  <span class="wordmark">{siteConfig.title}</span>
+  <div class="header-right">
+    <ThemeToggle />
+  </div>
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+  .wordmark {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: hsl(var(--theme-text));
+  }
+  .header-right {
+    display: flex;
+    align-items: baseline;
+    gap: 22px;
+  }
+
+  @media (max-width: 720px) {
+    .site-header {
+      margin-bottom: 36px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .site-header {
+      margin-bottom: 28px;
+    }
+    .wordmark {
+      font-size: 16px;
+    }
+  }
+</style>

@@ -1,0 +1,63 @@
+---
+import { siteConfig } from "@/site.config";
+import type { SiteMeta } from "@/types/site";
+import { absoluteUrl, withBase } from "@/utils/path";
+import "../styles/global.css";
+import newsreaderLatin from "@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2?url";
+
+interface Props extends SiteMeta {
+  jsonLd?: Record<string, unknown>;
+}
+
+const { articleDate, description, ogImage, title, jsonLd } = Astro.props;
+
+const siteTitle =
+  title === siteConfig.title ? title : `${title} | ${siteConfig.title}`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = absoluteUrl(
+  ogImage ?? "/favicon.svg",
+  Astro.site,
+);
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{siteTitle}</title>
+
+<link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
+<link rel="canonical" href={canonicalURL} />
+
+<meta name="title" content={siteTitle} />
+<meta name="description" content={description} />
+<meta name="author" content={siteConfig.author} />
+<meta name="generator" content={Astro.generator} />
+
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={newsreaderLatin}
+  crossorigin
+/>
+
+<meta name="theme-color" content="#f6f1e6" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content={siteConfig.title} />
+<meta property="og:locale" content={siteConfig.ogLocale} />
+<meta property="og:image" content={socialImageURL} />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImageURL} />
+
+{
+  jsonLd && (
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  )
+}
