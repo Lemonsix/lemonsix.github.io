@@ -6,9 +6,9 @@
 
 Software Architect · Domain-driven backends · Multitenant SaaS on Azure | Go
 
-Software architect specialized in translating complex business domains — finance, compliance, healthcare, logistics, and operations — into scalable, maintainable multitenant systems.
+Software architect specialized in translating complex business domains — finance, compliance, healthcare, logistics, and operations — into scalable SaaS backends (multitenant platforms and single-tenant products).
 
-Lead Developer at Contarg: broker-dealer SaaS with treasury/fiscal workflows, capital markets, healthcare, logistics, and omnichannel operations. Go microservices use hexagonal architecture on Azure; Alycs is a monolithic Go backend with separate Next.js frontend. Row-level multitenancy, event sourcing (subset), outbox for Meta APIs, Jaeger observability.
+Lead Developer at Contarg: (1) multitenant Go microservices platform on Azure — broker-dealers, compliance, tesorería, billing, healthcare, logistics, omnichannel; hexagonal architecture, row-level tenancy, event sourcing (subset), outbox for Meta APIs. (2) Alycs — separate single-tenant SaaS monolith (Go + Next.js), capital-markets integrations (Estudio Gallo, BYMA, Primary); not multitenant.
 
 ## Sections on site
 

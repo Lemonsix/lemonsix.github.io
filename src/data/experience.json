@@ -6,10 +6,10 @@
     "end": "present",
     "location": "Puerto Madryn, Chubut, Argentina",
     "highlights": [
-      "Lead architecture and development of a multitenant SaaS platform for broker-dealers, compliance, and reporting — treasury and fiscal operations, healthcare, logistics, capital markets, credit risk, stock, billing, and omnichannel workflows across 100+ repositories on Azure.",
-      "Go microservice backends follow hexagonal architecture; Alycs is a monolithic Go backend with a separate Next.js frontend integrating Estudio Gallo, BYMA, and Primary APIs.",
-      "Domain modeling and integrations: Auth (tenants, invites, RBAC/ABAC), Core entity registry, Tesorería (AR/AP, Interbanking, ARCA invoicing sync), Salud, Booking, Stock, Omnicanal (AI + MCP), Préstamos, Cars, Logística, and related services.",
-      "Platform patterns: row-level multitenancy, event sourcing on selected services, outbox for Omnicanal async delivery to Meta APIs, and internal M2M SDKs for service communication and security.",
+      "Led architecture across two product lines: the Contarg multitenant SaaS platform (broker-dealers, compliance, reporting) and Alycs, a separate single-tenant SaaS — not part of the multitenant stack.",
+      "Alycs: Go monolith with a separate Next.js frontend — SaaS for capital-markets workflows; integrations with Estudio Gallo, BYMA, and Primary APIs.",
+      "Contarg platform: 100+ Go microservices (hexagonal architecture) on Azure — Auth (tenants, invites, RBAC/ABAC), Core, Tesorería (AR/AP, Interbanking, ARCA invoicing sync), Billing, Salud, Booking, Stock, Omnicanal (AI + MCP), Préstamos, Cars, Logística, and related services.",
+      "Multitenant platform patterns: row-level tenancy, event sourcing on selected services, outbox for Omnicanal async delivery to Meta APIs, and internal M2M SDKs for service communication and security.",
       "Observability and production: structured logs, Jaeger error tracing and latency sampling, code reviews, schema migrations, and Azure log triage."
     ]
   },
